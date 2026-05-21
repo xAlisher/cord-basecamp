@@ -145,9 +145,9 @@
   /data/Qt/6.9.3/gcc_64/include/QtCore/qversiontagging.h \
   /data/Qt/6.9.3/gcc_64/include/QtCore/qxptype_traits.h \
   /data/Qt/6.9.3/gcc_64/include/QtCore/qyieldcpu.h \
-  /nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/core/interface.h \
-  /nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_api.h \
-  /nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h \
+  /nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include/interface.h \
+  /nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_api.h \
+  /nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

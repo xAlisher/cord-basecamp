@@ -66,9 +66,9 @@ include CMakeFiles/logos_cord_plugin_autogen_timestamp_deps.dir/compiler_depend.
 # Include the progress variables for this target.
 include CMakeFiles/logos_cord_plugin_autogen_timestamp_deps.dir/progress.make
 
+CMakeFiles/logos_cord_plugin_autogen_timestamp_deps: /home/alisher/Qt/6.9.3/gcc_64/lib/libQt6Qml.so.6.9.3
 CMakeFiles/logos_cord_plugin_autogen_timestamp_deps: /home/alisher/Qt/6.9.3/gcc_64/lib/libQt6Core.so.6.9.3
 CMakeFiles/logos_cord_plugin_autogen_timestamp_deps: /home/alisher/Qt/6.9.3/gcc_64/libexec/moc
-CMakeFiles/logos_cord_plugin_autogen_timestamp_deps: /home/alisher/Qt/6.9.3/gcc_64/lib/libQt6Qml.so.6.9.3
 
 logos_cord_plugin_autogen_timestamp_deps: CMakeFiles/logos_cord_plugin_autogen_timestamp_deps
 logos_cord_plugin_autogen_timestamp_deps: CMakeFiles/logos_cord_plugin_autogen_timestamp_deps.dir/build.make

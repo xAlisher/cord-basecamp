@@ -980,10 +980,10 @@ test_cord_plugin_autogen/timestamp: \
 	/home/alisher/basecamp/modules/cord-basecamp/src/plugin/plugin_metadata.json \
 	/home/alisher/basecamp/modules/cord-basecamp/tests/logos_api_stub.cpp \
 	/home/alisher/basecamp/modules/cord-basecamp/tests/test_cord_plugin.cpp \
-	/nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/core/interface.h \
-	/nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_api.h \
-	/nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h \
-	/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp/logos_api.h \
+	/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_api.h \
+	/nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include/interface.h \
+	/nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_api.h \
+	/nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
 	/usr/include/assert.h \

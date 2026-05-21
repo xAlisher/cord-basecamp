@@ -1,7 +1,7 @@
 CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /home/alisher/basecamp/modules/cord-basecamp/tests/logos_api_stub.cpp \
  /usr/include/stdc-predef.h \
- /nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp/logos_api.h \
+ /nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_api.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QObject \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qobject.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qobjectdefs.h \
@@ -101,13 +101,17 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/13/bits/std_abs.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
@@ -210,6 +214,8 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \
  /usr/include/c++/13/bits/allocated_ptr.h \
  /usr/include/c++/13/ext/atomicity.h \
@@ -240,6 +246,8 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qarraydata.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qpair.h /usr/include/string.h \
  /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qarraydatapointer.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qarraydataops.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qcontainertools_impl.h \
@@ -264,9 +272,11 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/c++/13/cerrno /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/13/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
@@ -324,7 +334,7 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qstring.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QHash \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qhash.h \
- /nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp/logos_types.h \
+ /nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_types.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QDataStream \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qdatastream.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QVariant \
@@ -356,7 +366,7 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /data/Qt/6.9.3/gcc_64/include/QtCore/q23utility.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/q20utility.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qobject.h \
- /nix/store/8cgbzy0jczrpizyga4i4pfjba77m3k7f-logos-liblogos-headers-0.1.0/include/cpp/logos_api_client.h \
+ /nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include/cpp/logos_api_client.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QVariantList \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qvariantlist.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QList \
@@ -364,6 +374,23 @@ CMakeFiles/test_cord_plugin.dir/tests/logos_api_stub.cpp.o: \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QVariant \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QMap \
  /data/Qt/6.9.3/gcc_64/include/QtCore/qmap.h \
- /nix/store/8cgbzy0jczrpizyga4i4pfjba77m3k7f-logos-liblogos-headers-0.1.0/include/cpp/logos_mode.h \
+ /nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include/cpp/logos_mode.h \
  /data/Qt/6.9.3/gcc_64/include/QtCore/QDebug \
- /data/Qt/6.9.3/gcc_64/include/QtCore/qdebug.h
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qdebug.h \
+ /nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_object.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/QJsonArray \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qjsonarray.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qjsonvalue.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qcborvalue.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qcborcommon.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qdatetime.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qcalendar.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qlocale.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qvariant.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qregularexpression.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qurl.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/quuid.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qendian.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qjsondocument.h \
+ /data/Qt/6.9.3/gcc_64/include/QtCore/qjsonparseerror.h \
+ /nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include/cpp/logos_api_provider.h

@@ -71,7 +71,7 @@ CMakeFiles/logos_cord_plugin_autogen: logos_cord_plugin_autogen/timestamp
 logos_cord_plugin_autogen/timestamp: /home/alisher/Qt/6.9.3/gcc_64/libexec/moc
 logos_cord_plugin_autogen/timestamp: CMakeFiles/logos_cord_plugin_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target logos_cord_plugin"
-	/usr/bin/cmake -E cmake_autogen /home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles/logos_cord_plugin_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E cmake_autogen /home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles/logos_cord_plugin_autogen.dir/AutogenInfo.json Release
 	/usr/bin/cmake -E touch /home/alisher/basecamp/modules/cord-basecamp/build/logos_cord_plugin_autogen/timestamp
 
 logos_cord_plugin_autogen: CMakeFiles/logos_cord_plugin_autogen

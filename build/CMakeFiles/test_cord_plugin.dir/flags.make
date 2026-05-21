@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/alisher/basecamp/modules/cord-basecamp/build\" -DQT_TESTCASE_SOURCEDIR=\"/home/alisher/basecamp/modules/cord-basecamp\" -DQT_TESTLIB_LIB
 
-CXX_INCLUDES = -I/home/alisher/basecamp/modules/cord-basecamp/build -I/home/alisher/basecamp/modules/cord-basecamp -I/home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin_autogen/include -I/home/alisher/basecamp/modules/cord-basecamp/src -I/nix/store/8cgbzy0jczrpizyga4i4pfjba77m3k7f-logos-liblogos-headers-0.1.0/include -I/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include -I/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp -I/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/core -isystem /home/alisher/Qt/6.9.3/gcc_64/include/QtCore -isystem /home/alisher/Qt/6.9.3/gcc_64/include -isystem /home/alisher/Qt/6.9.3/gcc_64/mkspecs/linux-g++ -isystem /home/alisher/Qt/6.9.3/gcc_64/include/QtTest
+CXX_INCLUDES = -I/home/alisher/basecamp/modules/cord-basecamp/build -I/home/alisher/basecamp/modules/cord-basecamp -I/home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin_autogen/include -I/home/alisher/basecamp/modules/cord-basecamp/src -I/nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include -I/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include -I/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp -I/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/core -isystem /home/alisher/Qt/6.9.3/gcc_64/include/QtCore -isystem /home/alisher/Qt/6.9.3/gcc_64/include -isystem /home/alisher/Qt/6.9.3/gcc_64/mkspecs/linux-g++ -isystem /home/alisher/Qt/6.9.3/gcc_64/include/QtTest
 
-CXX_FLAGS = -std=gnu++17 -fPIC
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC
 

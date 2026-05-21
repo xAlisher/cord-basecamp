@@ -1072,9 +1072,9 @@
 			null
 		],
 		[
-			"/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp/logos_api.h",
+			"/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_api.h",
 			"MU",
-			"IAGDFS6NTT/moc_logos_api.cpp",
+			"BY2WZYNUGS/moc_logos_api.cpp",
 			null
 		]
 	],
@@ -1101,10 +1101,10 @@
 		"/home/alisher/basecamp/modules/cord-basecamp/build",
 		"/home/alisher/basecamp/modules/cord-basecamp",
 		"/home/alisher/basecamp/modules/cord-basecamp/src",
-		"/nix/store/8cgbzy0jczrpizyga4i4pfjba77m3k7f-logos-liblogos-headers-0.1.0/include",
-		"/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include",
-		"/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp",
-		"/nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/core",
+		"/nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include",
+		"/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include",
+		"/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp",
+		"/nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/core",
 		"/home/alisher/Qt/6.9.3/gcc_64/include/QtCore",
 		"/home/alisher/Qt/6.9.3/gcc_64/include",
 		"/home/alisher/Qt/6.9.3/gcc_64/mkspecs/linux-g++",

@@ -1,4 +1,4 @@
-/home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin_autogen/IAGDFS6NTT/moc_logos_api.cpp: /nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp/logos_api.h \
+/home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin_autogen/BY2WZYNUGS/moc_logos_api.cpp: /nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_api.h \
   /home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin_autogen/moc_predefs.h \
   /data/Qt/6.9.3/gcc_64/include/QtCore/QDataStream \
   /data/Qt/6.9.3/gcc_64/include/QtCore/QHash \
@@ -122,7 +122,7 @@
   /data/Qt/6.9.3/gcc_64/include/QtCore/qversiontagging.h \
   /data/Qt/6.9.3/gcc_64/include/QtCore/qxptype_traits.h \
   /data/Qt/6.9.3/gcc_64/include/QtCore/qyieldcpu.h \
-  /nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h \
+  /nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

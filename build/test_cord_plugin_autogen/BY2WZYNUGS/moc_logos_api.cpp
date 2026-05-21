@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../../../../../nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/include/cpp/logos_api.h"
+#include "../../../../../../../../nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/include/cpp/logos_api.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>

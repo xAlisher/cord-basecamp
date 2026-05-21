@@ -149,9 +149,9 @@
  mdp:/home/alisher/basecamp/modules/cord-basecamp/build/logos_cord_plugin_autogen/moc_predefs.h
  mdp:/home/alisher/basecamp/modules/cord-basecamp/src/plugin/CordPlugin.h
  mdp:/home/alisher/basecamp/modules/cord-basecamp/src/plugin/plugin_metadata.json
- mdp:/nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/core/interface.h
- mdp:/nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_api.h
- mdp:/nix/store/pjizm2p5rn8isiinyqln1dyzy0yhs8dh-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h
+ mdp:/nix/store/lkr4jwcdh7k1yw5lisvpvaya4pq8qiv4-logos-liblogos-headers-0.1.0/include/interface.h
+ mdp:/nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_api.h
+ mdp:/nix/store/s7npfkwlrzf58qzfv4ymbh7h4wzx3fgq-logos-cpp-sdk-headers-0.1.0/include/cpp/logos_types.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h
  mdp:/usr/include/assert.h

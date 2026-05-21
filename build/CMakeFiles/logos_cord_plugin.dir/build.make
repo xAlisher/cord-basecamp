@@ -72,7 +72,7 @@ include CMakeFiles/logos_cord_plugin.dir/flags.make
 logos_cord_plugin_autogen/timestamp: /home/alisher/Qt/6.9.3/gcc_64/libexec/moc
 logos_cord_plugin_autogen/timestamp: CMakeFiles/logos_cord_plugin.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target logos_cord_plugin"
-	/usr/bin/cmake -E cmake_autogen /home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles/logos_cord_plugin_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E cmake_autogen /home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles/logos_cord_plugin_autogen.dir/AutogenInfo.json Release
 	/usr/bin/cmake -E touch /home/alisher/basecamp/modules/cord-basecamp/build/logos_cord_plugin_autogen/timestamp
 
 CMakeFiles/logos_cord_plugin.dir/logos_cord_plugin_autogen/mocs_compilation.cpp.o: CMakeFiles/logos_cord_plugin.dir/flags.make
@@ -115,7 +115,7 @@ cord_plugin.so: CMakeFiles/logos_cord_plugin.dir/logos_cord_plugin_autogen/mocs_
 cord_plugin.so: CMakeFiles/logos_cord_plugin.dir/src/plugin/CordPlugin.cpp.o
 cord_plugin.so: CMakeFiles/logos_cord_plugin.dir/build.make
 cord_plugin.so: /home/alisher/Qt/6.9.3/gcc_64/lib/libQt6Qml.so.6.9.3
-cord_plugin.so: /nix/store/rbsasyd55ijnxliw30j2r4ph7v5x6ljs-logos-cpp-sdk/lib/liblogos_sdk.a
+cord_plugin.so: /nix/store/c23ijr4km1wc2jixw4siqmbw3yaqf4z2-logos-cpp-sdk/lib/liblogos_sdk.a
 cord_plugin.so: /home/alisher/Qt/6.9.3/gcc_64/lib/libQt6Network.so.6.9.3
 cord_plugin.so: /home/alisher/Qt/6.9.3/gcc_64/lib/libQt6Core.so.6.9.3
 cord_plugin.so: CMakeFiles/logos_cord_plugin.dir/link.txt

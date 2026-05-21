@@ -72,7 +72,7 @@ include CMakeFiles/test_cord_plugin.dir/flags.make
 test_cord_plugin_autogen/timestamp: /home/alisher/Qt/6.9.3/gcc_64/libexec/moc
 test_cord_plugin_autogen/timestamp: CMakeFiles/test_cord_plugin.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target test_cord_plugin"
-	/usr/bin/cmake -E cmake_autogen /home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles/test_cord_plugin_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E cmake_autogen /home/alisher/basecamp/modules/cord-basecamp/build/CMakeFiles/test_cord_plugin_autogen.dir/AutogenInfo.json Release
 	/usr/bin/cmake -E touch /home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin_autogen/timestamp
 
 CMakeFiles/test_cord_plugin.dir/test_cord_plugin_autogen/mocs_compilation.cpp.o: CMakeFiles/test_cord_plugin.dir/flags.make
