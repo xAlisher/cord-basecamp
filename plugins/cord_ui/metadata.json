@@ -1,0 +1,13 @@
+{
+  "name": "cord_ui",
+  "version": "1.0.0",
+  "description": "Cord UI — subscribe to Beacon channels",
+  "author": "Cord",
+  "type": "ui_qml",
+  "pluginType": "qml",
+  "view": "Main.qml",
+  "dependencies": ["logos_cord", "liblogos_zone_sequencer_module"],
+  "category": "social",
+  "capabilities": [],
+  "icon": ""
+}

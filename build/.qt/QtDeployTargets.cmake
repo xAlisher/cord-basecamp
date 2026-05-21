@@ -1,0 +1,4 @@
+set(__QT_DEPLOY_TARGET_logos_cord_plugin_FILE /home/alisher/basecamp/modules/cord-basecamp/build/cord_plugin.so)
+set(__QT_DEPLOY_TARGET_logos_cord_plugin_TYPE MODULE_LIBRARY)
+set(__QT_DEPLOY_TARGET_test_cord_plugin_FILE /home/alisher/basecamp/modules/cord-basecamp/build/test_cord_plugin)
+set(__QT_DEPLOY_TARGET_test_cord_plugin_TYPE EXECUTABLE)

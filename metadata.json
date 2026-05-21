@@ -1,0 +1,20 @@
+{
+  "name": "logos_cord",
+  "version": "1.0.0",
+  "description": "Cord — social layer: subscribe to Beacon channels",
+  "type": "core",
+  "main": "logos_cord_plugin",
+  "dependencies": [],
+  "category": "social",
+  "icon": "",
+  "nix": {
+    "packages": { "build": [], "runtime": [] },
+    "external_libraries": [],
+    "cmake": {
+      "find_packages": ["Qt6 REQUIRED COMPONENTS Core Qml"],
+      "extra_sources": ["src/plugin/CordPlugin.cpp"],
+      "extra_include_dirs": ["src"],
+      "extra_link_libraries": ["Qt6::Core", "Qt6::Qml"]
+    }
+  }
+}

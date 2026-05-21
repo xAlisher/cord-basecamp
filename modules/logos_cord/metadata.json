@@ -1,0 +1,12 @@
+{
+  "name": "logos_cord",
+  "version": "1.0.0",
+  "description": "Cord — social layer: subscribe to Beacon channels",
+  "author": "Cord",
+  "type": "core",
+  "main": "logos_cord_plugin",
+  "dependencies": [],
+  "category": "social",
+  "capabilities": [],
+  "icon": ""
+}

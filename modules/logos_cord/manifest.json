@@ -1,0 +1,16 @@
+{
+  "author": "Cord",
+  "category": "social",
+  "dependencies": [],
+  "description": "Cord — social layer: subscribe to Beacon channels",
+  "icon": "",
+  "main": {
+    "linux-amd64":      "cord_plugin.so",
+    "linux-amd64-dev":  "cord_plugin.so",
+    "linux-x86_64-dev": "cord_plugin.so"
+  },
+  "manifestVersion": "0.2.0",
+  "name": "logos_cord",
+  "type": "core",
+  "version": "1.0.0"
+}

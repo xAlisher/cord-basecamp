@@ -1,0 +1,13 @@
+{
+  "author": "Cord",
+  "category": "social",
+  "dependencies": ["logos_cord", "liblogos_zone_sequencer_module"],
+  "description": "Cord — receives CIDs from Beacon inscriptions",
+  "icon": "icons/Cord_sidebar.png",
+  "main": {},
+  "manifestVersion": "0.2.0",
+  "name": "cord_ui",
+  "type": "ui_qml",
+  "version": "1.0.0",
+  "view": "Main.qml"
+}
