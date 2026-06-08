@@ -36,9 +36,12 @@ Item {
     property var pendingAnnouncements: []
 
     // ── Hidden clipboard helper ───────────────────────────────────────────────
+    // Must NOT be visible:false — invisible items can't receive focus → copy() silently fails.
+    // Use opacity:0 with non-zero size instead.
     TextEdit {
         id: clipboardHelper
-        visible: false
+        opacity: 0
+        width: 1; height: 1
     }
 
     function copyToClipboard(text) {
@@ -173,21 +176,34 @@ Item {
 
         if (payload.type === "cid_pin") {
             // v1: record only — download deferred until logos_storage is ready
-            var raw = logos.callModule("logos_cord", "recordDispatch",
-                         [entry.channelId, msg.id, "cid_pin",
-                          payload.cid || "", payload.source || "", "received"])
-            var res = callModuleParse(raw)
-            if (res && res.ok) {
-                // Prepend to UI log (newest first)
+
+            // Check if already in the UI model to avoid duplicates across polls
+            var alreadyInModel = false
+            for (var mi = 0; mi < dispatchLogModel.count; mi++) {
+                if (dispatchLogModel.get(mi).messageId === msg.id) {
+                    alreadyInModel = true
+                    break
+                }
+            }
+
+            // Persist to C++ backend — fire and don't gate the UI update on the result.
+            // recordDispatch can return ok:false for duplicates or transient errors;
+            // gating the insert on res.ok caused new inscriptions to silently not appear.
+            logos.callModule("logos_cord", "recordDispatch",
+                             [entry.channelId, msg.id, "cid_pin",
+                              payload.cid || "", payload.source || "", "received"])
+
+            // Always update UI model for new messages
+            if (!alreadyInModel) {
                 dispatchLogModel.insert(0, {
-                    channelId:   entry.channelId,
-                    label:       entry.label,
-                    messageId:   msg.id,
-                    cid:         payload.cid || "",
-                    source:      payload.source || "",
-                    type:        "cid_pin",
-                    ts:          Math.floor(Date.now() / 1000),
-                    result:      "received",
+                    channelId:    entry.channelId,
+                    label:        entry.label,
+                    messageId:    msg.id,
+                    cid:          payload.cid || "",
+                    source:       payload.source || "",
+                    type:         "cid_pin",
+                    ts:           Math.floor(Date.now() / 1000),
+                    result:       "received",
                     dispatchedTs: Math.floor(Date.now() / 1000)
                 })
                 // Trim UI model to 200
@@ -919,11 +935,13 @@ Item {
                         border.color: nodeUrlInput.activeFocus ? root.accent : root.borderColor
                         border.width: 1
                     }
-                    onAccepted: {
-                        logos.callModule("logos_cord", "setNodeUrl", [text.trim()])
-                        root.nodeUrl = text.trim()
+                    onEditingFinished: {
+                        var url = text.trim()
+                        if (url === root.nodeUrl) return
+                        logos.callModule("logos_cord", "setNodeUrl", [url])
+                        root.nodeUrl = url
                         logos.callModule("liblogos_zone_sequencer_module",
-                                         "set_node_url", [text.trim()])
+                                         "set_node_url", [url])
                     }
                 }
 
