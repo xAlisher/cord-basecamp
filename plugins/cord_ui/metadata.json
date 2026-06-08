@@ -9,5 +9,5 @@
   "dependencies": ["logos_cord", "liblogos_zone_sequencer_module"],
   "category": "social",
   "capabilities": [],
-  "icon": ""
+  "icon": "icons/Cord_sidebar.png"
 }
