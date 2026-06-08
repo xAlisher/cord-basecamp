@@ -36,11 +36,24 @@ Every decoded inscription is stored in the local dispatch log with:
 
 ## Dependencies
 
-| Module | Role |
-|--------|------|
-| `liblogos_zone_sequencer_module` | Queries zone channel pages |
+| Module | Installed name | Repo | Release |
+|--------|---------------|------|---------|
+| **cord** (this) | `logos_cord` | [cord-basecamp](https://github.com/xAlisher/cord-basecamp) | [v1.0.0 LGX](https://github.com/xAlisher/cord-basecamp/releases/tag/v1.0.0) |
+| **cord-ui** (this) | `cord_ui` (plugin) | [cord-basecamp](https://github.com/xAlisher/cord-basecamp) | [v1.0.0 LGX](https://github.com/xAlisher/cord-basecamp/releases/tag/v1.0.0) |
+| **zone sequencer** | `liblogos_zone_sequencer_module` | [vpavlin/zone-sequencer-module](https://github.com/vpavlin/zone-sequencer-module) — **not in AppImage**, install separately | — |
 
 No signing key required — Cord is read-only.
+
+## Configuration — set your node URL first
+
+Cord polls the Logos zone node to fetch channel inscriptions. **Nothing will be received until you point Cord at a reachable node.**
+
+1. Launch Logos Basecamp — the **Cord** tab appears in the sidebar
+2. Open the **Settings** panel → **Node URL**
+3. Enter your node's RPC endpoint (e.g. `http://localhost:8080`) and press **Enter**
+4. The same node URL is forwarded to `liblogos_zone_sequencer_module` automatically
+
+> There is no default public node. You need either a local Logos node or a shared testnet endpoint from the Logos team.
 
 ## Build
 
