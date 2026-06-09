@@ -40,7 +40,7 @@ Every decoded inscription is stored in the local dispatch log with:
 |--------|---------------|------|---------|
 | **cord** (this) | `logos_cord` | [cord-basecamp](https://github.com/xAlisher/cord-basecamp) | [v1.0.0 LGX](https://github.com/xAlisher/cord-basecamp/releases/tag/v1.0.0) |
 | **cord-ui** (this) | `cord_ui` (plugin) | [cord-basecamp](https://github.com/xAlisher/cord-basecamp) | [v1.0.0 LGX](https://github.com/xAlisher/cord-basecamp/releases/tag/v1.0.0) |
-| **zone sequencer** | `liblogos_zone_sequencer_module` | [vpavlin/zone-sequencer-module](https://github.com/vpavlin/zone-sequencer-module) — **not in AppImage**, install separately | — |
+| **zone sequencer** | `liblogos_zone_sequencer_module` | [xAlisher/logos-zone-sequencer-module](https://github.com/xAlisher/logos-zone-sequencer-module) — **not in AppImage**, fork of jimmy-claw's with stale-checkpoint + fr_from_bytes fixes | [v0.1.2 LGX](https://github.com/xAlisher/logos-zone-sequencer-module/releases/tag/v0.1.2) |
 
 No signing key required — Cord is read-only.
 
