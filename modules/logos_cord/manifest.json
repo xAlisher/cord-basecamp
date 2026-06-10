@@ -1,7 +1,7 @@
 {
   "author": "Cord",
   "category": "social",
-  "dependencies": [],
+  "dependencies": ["liblogos_zone_sequencer_module"],
   "description": "Cord — social layer: subscribe to Beacon channels",
   "icon": "",
   "main": {
