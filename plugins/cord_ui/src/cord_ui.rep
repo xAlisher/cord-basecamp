@@ -1,0 +1,13 @@
+// QtRO contract for cord_ui's backend. QML binds via logos.module("cord_ui")
+// and calls these SLOTs with logos.watch(...). Read-only bridge to the universal
+// zone_sequencer via modules().zone_sequencer.* — replaces the legacy
+// logos.callModule("liblogos_zone_sequencer_module", ...) path, which returns
+// "null" for the Qt-free universal module (cord#5). logos_cord stays on callModule
+// (it is a legacy Qt module, reachable directly).
+class CordUi
+{
+    PROP(bool zoneSeqReady=false READONLY)
+
+    SLOT(QString setNodeUrl(QString url))
+    SLOT(QString queryChannelPaged(QString channelId, QString cursorJson, int limit))
+}
