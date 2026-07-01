@@ -1,23 +1,24 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+import Logos.Theme  // logos-design-system (native on RC3+ Basecamp) — skill: logos-design-system-adoption
 
 Item {
     id: root
 
     // ── Palette ───────────────────────────────────────────────────────────────
-    readonly property color bgPrimary:     "#171717"
-    readonly property color bgSecondary:   "#262626"
-    readonly property color textPrimary:   "#FFFFFF"
-    readonly property color textSecondary: "#A4A4A4"
-    readonly property color textMuted:     "#666666"
-    readonly property color accent:        "#FF5000"
-    readonly property color accentHover:   "#FF6B1A"
-    readonly property color accentPressed: "#CC4000"
-    readonly property color successGreen:  "#4CAF50"
-    readonly property color errorRed:      "#F44336"
-    readonly property color warningAmber:  "#FFC107"
-    readonly property color borderColor:   "#333333"
+    readonly property color bgPrimary:     Theme.palette.background
+    readonly property color bgSecondary:   Theme.palette.backgroundSecondary
+    readonly property color textPrimary:   Theme.palette.text
+    readonly property color textSecondary: Theme.palette.textSecondary
+    readonly property color textMuted:     Theme.palette.textMuted
+    readonly property color accent:        Theme.palette.primary
+    readonly property color accentHover:   Theme.palette.primaryHover
+    readonly property color accentPressed: Theme.palette.primaryPressed
+    readonly property color successGreen:  Theme.palette.success
+    readonly property color errorRed:      Theme.palette.error
+    readonly property color warningAmber:  Theme.palette.warning
+    readonly property color borderColor:   Theme.palette.border
 
     // ── State ─────────────────────────────────────────────────────────────────
     property int    currentTab:      0   // 0 = Watchlist, 1 = Log
