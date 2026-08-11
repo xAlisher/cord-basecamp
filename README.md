@@ -1,5 +1,8 @@
 # cord-basecamp
 
+> This is a personal, experimental hobby project. It is not an official Logos product. Not audited.
+
+
 Channel subscription and discovery module for [Logos Basecamp](https://github.com/xAlisher/logos-basecamp).
 
 Subscribe to any Logos zone channel and Cord will poll it, decode inscriptions, and surface them in the UI. The primary use case: follow someone's Keeper channel to see everything they've permanently archived on Logos.
