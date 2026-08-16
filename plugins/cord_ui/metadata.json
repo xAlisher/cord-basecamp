@@ -5,8 +5,10 @@
   "author": "Cord",
   "type": "ui_qml",
   "pluginType": "qml",
+  "interface": "universal",
   "view": "Main.qml",
-  "dependencies": ["logos_cord", "liblogos_zone_sequencer_module"],
+  "dependencies": ["logos_cord", "zone_sequencer"],
+  "codegen": { "rep": "src/cord_ui.rep" },
   "category": "social",
   "capabilities": [],
   "icon": "icons/Cord_sidebar.png"

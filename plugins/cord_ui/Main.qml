@@ -1,23 +1,24 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+import Logos.Theme  // logos-design-system (native on RC3+ Basecamp) — skill: logos-design-system-adoption
 
 Item {
     id: root
 
     // ── Palette ───────────────────────────────────────────────────────────────
-    readonly property color bgPrimary:     "#171717"
-    readonly property color bgSecondary:   "#262626"
-    readonly property color textPrimary:   "#FFFFFF"
-    readonly property color textSecondary: "#A4A4A4"
-    readonly property color textMuted:     "#666666"
-    readonly property color accent:        "#FF5000"
-    readonly property color accentHover:   "#FF6B1A"
-    readonly property color accentPressed: "#CC4000"
-    readonly property color successGreen:  "#4CAF50"
-    readonly property color errorRed:      "#F44336"
-    readonly property color warningAmber:  "#FFC107"
-    readonly property color borderColor:   "#333333"
+    readonly property color bgPrimary:     Theme.palette.background
+    readonly property color bgSecondary:   Theme.palette.backgroundSecondary
+    readonly property color textPrimary:   Theme.palette.text
+    readonly property color textSecondary: Theme.palette.textSecondary
+    readonly property color textMuted:     Theme.palette.textMuted
+    readonly property color accent:        Theme.palette.primary
+    readonly property color accentHover:   Theme.palette.primaryHover
+    readonly property color accentPressed: Theme.palette.primaryPressed
+    readonly property color successGreen:  Theme.palette.success
+    readonly property color errorRed:      Theme.palette.error
+    readonly property color warningAmber:  Theme.palette.warning
+    readonly property color borderColor:   Theme.palette.border
 
     // ── State ─────────────────────────────────────────────────────────────────
     property int    currentTab:      0   // 0 = Watchlist, 1 = Log
@@ -27,6 +28,13 @@ Item {
     property int    pollIndex:       0
     property bool   zoneSeqReady:    false
     property string statusMsg:       ""
+
+    // zone_sequencer is a Qt-free universal module; legacy logos.callModule can't
+    // reach it (returns "null" — cord#5). We call it through cord_ui's own C++ QtRO
+    // backend, which forwards to modules().zone_sequencer.*, via logos.module("cord_ui")
+    // + logos.watch(). logos_cord stays on callModule (legacy Qt module).
+    readonly property var cordBackend: (typeof logos !== "undefined" && logos.module)
+                                       ? logos.module("cord_ui") : null
 
     // watchlist: JS array mirror of C++ watchlist for UI rendering
     property var watchlist: []
@@ -66,7 +74,20 @@ Item {
         loadConfig()
         loadWatchlist()
         loadDispatchLog()
-        initZoneSeq()
+        // zone_sequencer init is gated on the QtRO backend context being ready
+        // (isViewModuleReady / onViewModuleReadyChanged) — the canonical universal gate.
+        if (typeof logos !== "undefined" && logos.module
+                && root.cordBackend !== null && logos.isViewModuleReady("cord_ui")) {
+            initZoneSeq()
+        }
+    }
+
+    Connections {
+        target: logos
+        function onViewModuleReadyChanged(moduleName, isReady) {
+            if (moduleName === "cord_ui" && isReady && root.cordBackend !== null)
+                root.initZoneSeq()
+        }
     }
 
     function loadConfig() {
@@ -105,10 +126,10 @@ Item {
 
     // ── Zone sequencer init (read-only — node URL only, no signing key) ────────
     function initZoneSeq() {
-        if (typeof logos === "undefined" || !logos.callModule) return
-        logos.callModule("liblogos_zone_sequencer_module", "set_node_url",
-                         [root.nodeUrl])
-        root.zoneSeqReady = true
+        if (root.cordBackend === null) return
+        logos.watch(root.cordBackend.setNodeUrl(root.nodeUrl),
+                    function () { root.zoneSeqReady = true },
+                    function () { root.zoneSeqReady = true })   // proceed; poll retries
     }
 
     // ── Poll timer ────────────────────────────────────────────────────────────
@@ -135,38 +156,43 @@ Item {
         var entry = root.watchlist[root.pollIndex % root.watchlist.length]
         root.pollIndex++
 
-        var raw = logos.callModule("liblogos_zone_sequencer_module",
-                                   "query_channel_paged",
-                                   [entry.channelId, entry.cursorJson || "{}", 20])
-        var res = callModuleParse(raw)
+        // query_channel_paged is now async through the QtRO backend (universal
+        // zone_sequencer). The processing that used the synchronous result moves
+        // into the watch success callback; entry is captured by the closure.
+        logos.watch(root.cordBackend.queryChannelPaged(
+                        entry.channelId, entry.cursorJson || "{}", 20),
+            function (raw) {
+                var res = callModuleParse(raw)
 
-        if (!res || !Array.isArray(res.messages)) {
-            root.pollBusy = false
-            return
-        }
-
-        for (var i = 0; i < res.messages.length; i++) {
-            dispatchMessage(entry, res.messages[i])
-        }
-
-        // Always save cursor (done=true means tail reached; must persist so next
-        // poll starts from here to pick up NEW messages, not replay from start)
-        if (res.cursor) {
-            var cursorStr = JSON.stringify(res.cursor)
-            logos.callModule("logos_cord", "updateCursor",
-                             [entry.channelId, cursorStr])
-            // Update local watchlist mirror
-            for (var j = 0; j < root.watchlist.length; j++) {
-                if (root.watchlist[j].channelId === entry.channelId) {
-                    var wlEntry = root.watchlist[j]
-                    wlEntry.cursorJson = cursorStr
-                    root.watchlist[j] = wlEntry
-                    break
+                if (!res || !Array.isArray(res.messages)) {
+                    root.pollBusy = false
+                    return
                 }
-            }
-        }
 
-        root.pollBusy = false
+                for (var i = 0; i < res.messages.length; i++) {
+                    dispatchMessage(entry, res.messages[i])
+                }
+
+                // Always save cursor (done=true means tail reached; must persist so next
+                // poll starts from here to pick up NEW messages, not replay from start)
+                if (res.cursor) {
+                    var cursorStr = JSON.stringify(res.cursor)
+                    logos.callModule("logos_cord", "updateCursor",
+                                     [entry.channelId, cursorStr])
+                    // Update local watchlist mirror
+                    for (var j = 0; j < root.watchlist.length; j++) {
+                        if (root.watchlist[j].channelId === entry.channelId) {
+                            var wlEntry = root.watchlist[j]
+                            wlEntry.cursorJson = cursorStr
+                            root.watchlist[j] = wlEntry
+                            break
+                        }
+                    }
+                }
+
+                root.pollBusy = false
+            },
+            function (err) { root.pollBusy = false })
     }
 
     // ── dispatchMessage ───────────────────────────────────────────────────────
@@ -940,8 +966,9 @@ Item {
                         if (url === root.nodeUrl) return
                         logos.callModule("logos_cord", "setNodeUrl", [url])
                         root.nodeUrl = url
-                        logos.callModule("liblogos_zone_sequencer_module",
-                                         "set_node_url", [url])
+                        if (root.cordBackend !== null)
+                            logos.watch(root.cordBackend.setNodeUrl(url),
+                                        function () {}, function () {})
                     }
                 }
 
